@@ -193,4 +193,9 @@
 		}
 		
 	};
+
+      $('section.slider article, div.slider div, div.slider article, section.slider div').wrapAll('<div class="sliderInner" />');
+
+        slidesContainer : t.children("div:first, section:first"),
+        slides : t.children("div:first, section:first").children("div, article"),
 })(jQuery);

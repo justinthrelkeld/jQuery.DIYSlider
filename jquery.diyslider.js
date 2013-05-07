@@ -12,7 +12,6 @@
 
     //// first plugin call
     if ( typeof (mixed) == 'object' || !mixed) {
-
       $('section.slider article, div.slider div, div.slider article, section.slider div').wrapAll('<div class="sliderInner" />');
 
       // plugin data and functions

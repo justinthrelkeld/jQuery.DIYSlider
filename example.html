@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Responsive Slider Example</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.diyslider.js"></script>
+
+    <script type="text/javascript">
+    </script>
+    
+    <style>
+    .sliderResponsive{width: 30%; height: 20%;overflow: hidden;}
+    </style>
+  </head>
+<body>
+  <div class="sliderResponsive">
+  <div class="slider"><!-- The slider -->
+    <!-- Each div below is considered a slide -->
+    <div><img src="http://placekitten.com/g/400/300"/></div>
+    <div><img src="http://placekitten.com/g/400/200"/></div>
+    <div><img src="http://placekitten.com/g/200/300"/></div>
+    <div><img src="http://placekitten.com/g/300/200"/></div>
+</div>
+</div>
+<script type="text/javascript">
+var w = $(".sliderResponsive").width();
+var h = $(".sliderResponsive").height();
+    $(".slider").diyslider({
+      width: w,
+      height: h
+      });
+    $(".slider").bind('click', function(){
+      $(".slider").diyslider("move", "forth")
+    });
+    $(window).on('resize', function(){
+      w = $(".sliderResponsive").width();
+      h = $(".sliderResponsive").height();
+      console.log(w);
+    });
+</script>
+</body>
+</html>
